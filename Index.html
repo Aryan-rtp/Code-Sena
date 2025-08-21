@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Career & Skill Development Advisor</title>
+  <meta name="description" content="Ghost-themed AI assistant demo for the Phantom Agents hackathon." />
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23A78BFA' d='M32 6c11 0 20 9 20 20v22c0 2-2 4-4 4-5 0-6-5-10-5s-5 5-10 5-6-5-10-5-5 5-10 5c-2 0-4-2-4-4V26C4 15 13 6 24 6h8Z'/%3E%3Ccircle cx='26' cy='28' r='3' fill='%23000'/%3E%3Ccircle cx='38' cy='28' r='3' fill='%23000'/%3E%3C/path%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <div class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 3c4.418 0 8 3.582 8 8v7c0 .943-.767 1.71-1.71 1.71-2.216 0-2.66-2.14-4.45-2.14S11.606 19.71 9.39 19.71c-1.79 0-2.234-2.14-4.45-2.14C3.99 17.57 3.223 16.803 3.223 15.86V11c0-4.418 3.36-8 8-8h.777Z"
+              fill="currentColor" />
+          </svg>
+        </div>
+        <span>AI <span class="grad">Career Advisor</span></span>
+      </div>
+      <a class="cta" href="#demo">Try Demo</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1 class="title">Your <span class="grad">AI Career & Skill Development Advisor</span>.</h1>
+        <p class="subtitle">An agentic web app that analyzes interests & strengths, recommends career paths and courses,
+          tracks progress, and even matches internships. Built with HTML/CSS/JS — perfect for Round 1 submissions.</p>
+        <div class="badges">
+          <span class="badge">Career Guidance</span>
+          <span class="badge">Skills & Courses</span>
+          <span class="badge">Progress Tracking</span>
+          <span class="badge">Internship Matcher</span>
+        </div>
+        <div class="features">
+          <div class="card feature glow">
+            <h4>Personalized Roadmaps</h4>
+            <p>Creates 30/60/90‑day plans from your interests & strengths.</p>
+          </div>
+          <div class="card feature glow">
+            <h4>Course Recommendations</h4>
+            <p>Suggests curated courses & resources mapped to your goals.</p>
+          </div>
+          <div class="card feature glow">
+            <h4>Internship Matching</h4>
+            <p>Generates JD-aligned skills checklist & outreach templates.</p>
+          </div>
+        </div>
+        <div class="card feature glow">
+          <h4>API-Ready</h4>
+          <p>Swap the mock bot with OpenAI/HF by pasting your API key.</p>
+        </div>
+        <div class="card feature glow">
+          <h4>One File Deploy</h4>
+          <p>Drop this file on GitHub Pages/Netlify and you’re live.</p>
+        </div>
+      </div>
+      </div>
+      <div id="demo" class="card glow chat-wrap" aria-label="Chat demo">
+        <div class="chat" id="chat" aria-live="polite" aria-atomic="false"></div>
+        <div class="composer">
+          <input id="input" placeholder="Ask your advisor… (e.g., Make a 90‑day roadmap for frontend)" />
+          <button id="send">Send</button>
+        </div>
+        <div class="small" style="margin-top:10px">Demo uses a mock bot. <strong>Tip:</strong> Open settings (⚙️) below
+          to plug your API key and talk to a real model.</div>
+      </div>
+    </section>
+
+    <section class="section grid-2">
+      <div class="card glow" style="padding:18px">
+        <h3 style="margin-top:0">How it works</h3>
+        <div class="hr"></div>
+        <ol style="margin:0; padding-left: 18px; line-height:1.8">
+          <li><strong>Plan:</strong> The phantom drafts a 2–3 step plan.</li>
+          <li><strong>Gather:</strong> (Mock) waits using <code>await</code> and timers to simulate tool use.</li>
+          <li><strong>Respond:</strong> Streams a final answer to the chat.</li>
+        </ol>
+        <p class="small" style="margin-top:10px">Swap the mock with real API by enabling <em>Live Mode</em> in Settings.
+        </p>
+      </div>
+      <div class="card glow" style="padding:18px">
+        <h3 style="margin-top:0">Settings</h3>
+        <div class="hr"></div>
+        <label class="small" for="apiKey">OpenAI API Key (optional)</label>
+        <input id="apiKey" placeholder="sk-..."
+          style="width:100%; margin-top:8px; background:#0e0e16; border:1px solid rgba(255,255,255,0.08); color:var(--text); padding:10px 12px; border-radius:10px;">
+        <div style="display:flex; gap:10px; margin-top:10px">
+          <button id="toggleLive">Enable Live Mode</button>
+          <button id="clear">Clear Chat</button>
+        </div>
+        <p class="small" style="margin-top:10px">Your key is stored only in memory of this page and never uploaded
+          anywhere by this demo. For production, use a backend proxy.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kpis">
+        <div class="card kpi glow">
+          <div class="n">~1 KB JS</div>
+          <div class="t">tiny, fast</div>
+        </div>
+        <div class="card kpi glow">
+          <div class="n">100% Frontend</div>
+          <div class="t">no server needed</div>
+        </div>
+        <div class="card kpi glow">
+          <div class="n">1‑File Deploy</div>
+          <div class="t">drop to GitHub Pages</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">© 2025 Team Code Sena. Built for the Generative AI Hackathon. Disclosures: Used ChatGPT
+        for scaffolding and copy editing.</div>
+    </footer>
+  </main>
+
+  <script src="Script.js"></script>
+</body>
+
+</html>
