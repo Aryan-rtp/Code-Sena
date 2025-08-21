@@ -28,12 +28,7 @@ Version Control: Git & GitHub
 
 Clone this repository:
 
-git clone https://github.com/your-username/ai-career-advisor.git
-
-
-Open project folder:
-
-cd ai-career-advisor
+git clone (https://github.com/Aryan-rtp/Code-Sena.git)
 
 
 Open index.html in your browser to view the prototype.
