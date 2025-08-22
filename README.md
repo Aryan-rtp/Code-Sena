@@ -29,7 +29,7 @@ Version Control: Git & GitHub
 Clone this repository:
 
 git clone (https://github.com/Aryan-rtp/Code-Sena.git)
-
+DEMO LINK (https://aryan-rtp.github.io/Code-Sena/Index.html)
 
 Open index.html in your browser to view the prototype.
 
